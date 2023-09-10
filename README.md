@@ -1,113 +1,115 @@
 # ForexExchange
-ForexExchange API Application README
-Overview
-Welcome to the ForexExchange API application built using Node.js and Express! This application provides access to foreign exchange rate data, allowing users to  convert currencies, retrieve the latest exchange rates, and access historical conversion rates. This README file will guide you through the setup, configuration, and usage of the application.
+ForexExchange API Application README<br>
+Overview<br>
+Welcome to the ForexExchange API application built using Node.js and Express! This application provides access to foreign exchange rate data, allowing users to  convert currencies, retrieve the latest exchange rates, and access historical conversion rates. This README file will guide you through the setup, configuration, and usage of the application.<br><br>
 
-Table of Contents
-Installation
-Configuration
-Usage
-API Endpoints
-Examples
-Contributing
-License
-Installation
-To get started with the ForexExchange API application, follow these steps:
+<b>Table of Contents</b><br>
+<ol>
+<li>Installation<br></li>
+<li>Configuration<br></li>
+<li>Usage<br></li>
+<li>API Endpoints<br></li>
+<li>Examples<br></li>
+<li>Contributing<br></li>
+<li>License<br></li>
+<li>Installation<br></li>
+  </ol>
+To get started with the ForexExchange API application, follow these steps:<br><br>
 
-Clone the Repository: Clone this repository to your local machine using Git:
+Clone the Repository: Clone this repository to your local machine using Git:<br><br>
 
-bash
-Copy code
-git clone https://github.com/yourusername/forexexchange-api-nodejs.git
-Install Dependencies: Navigate to the project directory and install the required dependencies using npm:
+bash<br>
+Copy code<br>
+git clone https://github.com/yourusername/forexexchange-api-nodejs.git<br>
+Install Dependencies: Navigate to the project directory and install the required dependencies using npm:<br>
 
-bash
-Copy code
-cd forexexchange-api-nodejs
-npm install
-
-
-Start the Application: Run the following command to start the application:
+bash<br>
+Copy code<br>
+cd forexexchange-api-nodejs<br>
+npm install<br><br>
 
 
-Copy code
-npm start
-The application should now be up and running on http://localhost:3000.
+Start the Application: Run the following command to start the application:<br><br>
 
-Configuration
-The application uses environment variables for configuration. The following environment variables are used:
 
-ACCESS_KEY: Your generated access key for accessing the API.
-PORT: The port on which the application will listen. By default, it is set to 3000.
-Usage
-The ForexExchange API application exposes several endpoints that allow users to access foreign exchange rate data. Refer to the API Endpoints section below for details on available endpoints and their functionality.
+Copy code<br>
+npm start<br>
+The application should now be up and running on http://localhost:3000.<br>
 
-To make API requests, send HTTP requests to the appropriate endpoint with the required parameters. The API will respond with exchange rate data in JSON format.
+Configuration<br>
+The application uses environment variables for configuration. The following environment variables are used:<br>
 
-API Endpoints
-The following API endpoints are available in the ForexExchange API application:
+ACCESS_KEY: Your generated access key for accessing the API.<br>
+PORT: The port on which the application will listen. By default, it is set to 3000.<br>
+Usage<br>
+The ForexExchange API application exposes several endpoints that allow users to access foreign exchange rate data. Refer to the API Endpoints section below for details on available endpoints and their functionality.<br>
 
-Create Access Token:
+To make API requests, send HTTP requests to the appropriate endpoint with the required parameters. The API will respond with exchange rate data in JSON format.<br>
 
-Endpoint: /token_generator
-Description: Generate an access token for accessing the API.
-Regenerate Token:
+API Endpoints<br>
+The following API endpoints are available in the ForexExchange API application:<br>
 
-Endpoint: /regenerate
-Description: Regenerate the access token.
-Currency Conversion:
+Create Access Token:<br>
 
-Endpoint: /conversion?access_key=Axxess_Key&from=USD&to=INR&amount=23
-Description: Convert an amount from one currency to another.
-Latest Exchange Rates:
+Endpoint: /token_generator<br>
+Description: Generate an access token for accessing the API.<br>
+Regenerate Token:<br><br>
 
-Endpoint: /live?access_key=Axxess_Key/symbol=USD,INR
-Description: Retrieve the latest exchange rates for specific currency symbols[optional].
-Historical Conversion Rates:
+Endpoint: /regenerate<br>
+Description: Regenerate the access token.<br>
+Currency Conversion:<br><br>
 
-Endpoint: /historical?access_key=Axxess_Key/symbol=USD,INR
-Description: Retrieve historical conversion rates for specific currency symbols for the past seven days from the current date.
-Each API endpoint has a rate limit of 100 requests per hour.
+Endpoint: /conversion?access_key=Axxess_Key&from=USD&to=INR&amount=23<br>
+Description: Convert an amount from one currency to another.<br>
+Latest Exchange Rates:<br><br>
 
-Examples
-To help you get started, here are some examples of how to use the ForexExchange API:
+Endpoint: /live?access_key=Axxess_Key/symbol=USD,INR<br>
+Description: Retrieve the latest exchange rates for specific currency symbols[optional].<br>
+Historical Conversion Rates:<br><br>
 
-Create Access Token:
+Endpoint: /historical?access_key=Axxess_Key/symbol=USD,INR<br>
+Description: Retrieve historical conversion rates for specific currency symbols for the past seven days from the current date.<br>
+Each API endpoint has a rate limit of 100 requests per hour.<br><br>
 
-bash
-Copy code
-GET http://localhost:3000/token_generator
-Regenerate Token:
+Examples<br>
+To help you get started, here are some examples of how to use the ForexExchange API:<br><br>
 
-bash
-Copy code
-GET http://localhost:3000/regenerate
-Currency Conversion:
+Create Access Token:<br><br>
 
-vbnet
-Copy code
-GET http://localhost:3000/conversion?access_key=YourGeneratedAccessKey&from=USD&to=INR&amount=23
-Latest Exchange Rates:
+bash<br>
+Copy code<br>
+GET http://localhost:3000/token_generator<br>
+Regenerate Token:<br><br>
 
-bash
-Copy code
-GET http://localhost:3000/live?access_key=YourGeneratedAccessKey&symbol=USD,INR
-Historical Conversion Rates:
+bash<br>
+Copy code<br>
+GET http://localhost:3000/regenerate<br>
+Currency Conversion:<br><br>
 
-bash
-Copy code
-GET http://localhost:3000/historical?access_key=YourGeneratedAccessKey&symbol=USD,INR
-For more detailed examples and usage guidelines, refer to the API documentation.
+vbnet<br>
+Copy code<br>
+GET http://localhost:3000/conversion?access_key=YourGeneratedAccessKey&from=USD&to=INR&amount=23<br>
+Latest Exchange Rates:<br><br>
 
-Contributing
-If you would like to contribute to the development of this application, please follow these guidelines:
+bash<br>
+Copy code<br>
+GET http://localhost:3000/live?access_key=YourGeneratedAccessKey&symbol=USD,INR<br>
+Historical Conversion Rates:<br><br>
 
-Fork the repository on GitHub.
-Create a new branch for your changes.
-Make your changes and commit them with clear, concise commit messages.
-Push your changes to your fork.
-Submit a pull request to the original repository.
-License
-This ForexExchange API application is licensed under the MIT License. You are free to use, modify, and distribute it as per the terms of the license.
+bash<br>
+Copy code<br>
+GET http://localhost:3000/historical?access_key=YourGeneratedAccessKey&symbol=USD,INR<br>
+For more detailed examples and usage guidelines, refer to the API documentation.<br><br>
+
+Contributing<br>
+If you would like to contribute to the development of this application, please follow these guidelines:<br><br>
+
+Fork the repository on GitHub.<br>
+Create a new branch for your changes.<br>
+Make your changes and commit them with clear, concise commit messages.<br>
+Push your changes to your fork.<br>
+Submit a pull request to the original repository.<br>
+License<br>
+This ForexExchange API application is licensed under the MIT License. You are free to use, modify, and distribute it as per the terms of the license.<br><br>
 
 Thank you for using the ForexExchange API application! If you have any questions or need further assistance, please don't hesitate to reach out to the maintainers.

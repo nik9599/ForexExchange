@@ -1,6 +1,5 @@
-import axios from "axios";
 import CC from "currency-converter-lt";
-const API_KEY = "038fdb262e8bb6198c00160fccc79851";
+
 
 export const convertor = async (req, res) => {
   try {

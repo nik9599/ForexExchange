@@ -10,6 +10,7 @@ router.get("/token_generator", tokenGenerator);
 router.get("/regenrate", resetToken);
 router.post("/conversion", access_Key, convertor);
 router.get("/live/:symbol?", access_Key, liveRate);
+
 router.get("/historical/:symbol", access_Key, historicalData);
 
 export default router;
